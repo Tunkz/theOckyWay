@@ -18,6 +18,6 @@ public class Chips implements CostInterface {
 
     @Override
     public double getPrice() {
-        return 0;
+        return 1.5;
     }
 }
