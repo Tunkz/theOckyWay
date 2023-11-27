@@ -26,7 +26,7 @@ public class Order implements CostInterface {
     }
 
     public List<Drink> getDrinks() {
-       List<Drink> drinks = new ArrayList<Drink>();
+        List<Drink> drinks = new ArrayList<Drink>();
 
         return drinks;
     }
@@ -36,7 +36,7 @@ public class Order implements CostInterface {
     }
 
     public List<Chips> getChips() {
-       List<Chips> chips = new ArrayList<Chips>();
+        List<Chips> chips = new ArrayList<Chips>();
 
         return chips;
     }
@@ -74,6 +74,19 @@ public class Order implements CostInterface {
 
     @Override
     public double getPrice() {
-        return 0;
+
+        double totalPrice = 0;
+        for (int i = 0; i < chips.size(); i++) {
+            totalPrice += chips.get(i).getPrice();
+        }
+        for (int i = 0; i < drinks.size(); i++) {
+            totalPrice += drinks.get(i).getPrice();
+        }
+        for (int i = 0; i < sandwiches.size(); i++) {
+            totalPrice += sandwiches.get(i).getPrice();
+        }
+        return totalPrice;
+
     }
+
 }
