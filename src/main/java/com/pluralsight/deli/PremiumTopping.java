@@ -1,15 +1,21 @@
 package com.pluralsight.deli;
 
 public class PremiumTopping extends Topping{
-    private double price;
-
+    private double price ;
+private boolean isMeat
     public PremiumTopping(String name) {
         super(name);
-
     }
 
     @Override
     public double getPrice() {
-        return price;
+
+        return 0;
+    }
+    public double getPrice(String size){
+
+        if (size.equalsIgnoreCase("S")){
+
+        }
     }
 }
