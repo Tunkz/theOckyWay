@@ -8,13 +8,16 @@ public class Sandwich implements CostInterface {
     private List<Topping> toppings;
     private boolean toasted;
     private boolean extraCheese;
+    private boolean extraMeat;
 
-    public Sandwich(int size, String breadType, List<Topping> toppings, boolean toasted, boolean extraCheese) {
+
+    public Sandwich(int size, String breadType, List<Topping> toppings, boolean toasted, boolean extraCheese, boolean extraMeat) {
         this.size = size;
         this.breadType = breadType;
         this.toppings = toppings;
         this.toasted = toasted;
         this.extraCheese = extraCheese;
+        this.extraMeat = extraMeat;
     }
 
     public int getSize() {
@@ -23,6 +26,14 @@ public class Sandwich implements CostInterface {
 
     public void setSize(int size) {
         this.size = size;
+    }
+
+    public boolean isExtraMeat() {
+        return extraMeat;
+    }
+
+    public void setExtraMeat(boolean extraMeat) {
+        this.extraMeat = extraMeat;
     }
 
     public String getBreadType() {
@@ -62,7 +73,7 @@ public class Sandwich implements CostInterface {
         return 0;
     }
 
-    public double breadSizeInInches(){
-        String fourInchesBread =
+    public double breadSizeInInches() {
+        return 0;
     }
 }
