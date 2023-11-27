@@ -28,6 +28,16 @@ public class Drink implements CostInterface {
 
     @Override
     public double getPrice() {
-        return 0;
+
+        String size = "null";
+        if (size.equalsIgnoreCase("S")) {
+            return 2.00;
+        } else if (size.equalsIgnoreCase("M")) {
+            return 2.50;
+        } else if (size.equalsIgnoreCase("L")) {
+            return 3.00;
+        }
+
+        return getPrice();
     }
 }

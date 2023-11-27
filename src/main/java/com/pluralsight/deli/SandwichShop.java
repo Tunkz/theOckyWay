@@ -1,12 +1,15 @@
 package com.pluralsight.deli;
 
-public class SandwichShop implements CostInterface{
+import java.util.Scanner;
+
+public class SandwichShop {
+    public final Scanner userInput = new Scanner(System.in);
+
     public static void main(String[] args) {
 
+
     }
 
-    @Override
-    public double getPrice() {
-        return 0;
-    }
+
 }
+
