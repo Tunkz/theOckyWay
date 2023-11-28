@@ -118,7 +118,16 @@ public class SandwichShop {
 
     }
 
+    public void addDrink() {
+        System.out.println("What size drink would you like? ( S | M | L )");
+        String size = scanner.nextLine();
 
+        System.out.println("Please select a drink of your choice: ");
+        String flavor = scanner.nextLine();
+
+        Drink drink = new Drink(size, flavor);
+        order.addDrink(drink);
+    }
 
 }
 
