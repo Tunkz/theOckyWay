@@ -7,6 +7,10 @@ import java.util.Scanner;
 public class SandwichShop {
 
     private final static Scanner scanner = new Scanner(System.in);
+    private List<Sandwich> sandwiches = new ArrayList<>();
+    private List<Drink> drinks = new ArrayList<>();
+    private List<Chips> chips = new ArrayList<>();
+    private final  Order order = new Order(sandwiches, drinks, chips);
 
     public static void main(String[] args) {
         System.out.println("┌──────────────────────────────────────────────────────┐\n" +
@@ -20,8 +24,6 @@ public class SandwichShop {
                 "└──────────────────────────────────────────────────────┘");
 
 
-
-
         Scanner scanner = new Scanner(System.in);
 
         System.out.println("Please select an option: ");
@@ -32,16 +34,18 @@ public class SandwichShop {
 
         switch (input) {
             case "1":
-                orderScreen();
+
                 break;
             case "0":
+
+                orderScreen();
+
                 break;
             default:
                 System.out.println("Error! Please select the right option from the provided ones!");
 
 
         }
-
 
 
     }
@@ -88,6 +92,7 @@ public class SandwichShop {
             }
 
         }
+
     }
 
     public void processAddSandwich() {
@@ -109,7 +114,7 @@ public class SandwichShop {
         List<Topping> toppings = new ArrayList<>();
         String topping = scanner.nextLine();
         if (topping.equalsIgnoreCase("Yes")) {
-            topping.
+
         }
 
 //sandwich sandwich = new sandwich (size, bread, topping,...)
@@ -119,6 +124,7 @@ public class SandwichShop {
     }
 
     public void addDrink() {
+
         System.out.println("What size drink would you like? ( S | M | L )");
         String size = scanner.nextLine();
 
@@ -126,8 +132,9 @@ public class SandwichShop {
         String flavor = scanner.nextLine();
 
         Drink drink = new Drink(size, flavor);
-        order.addDrink(drink);
+        order.addDrinkToOrder(drink);
     }
+
 
 }
 
