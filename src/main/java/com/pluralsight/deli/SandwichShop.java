@@ -100,27 +100,78 @@ public class SandwichShop {
 
     public void processAddSandwich() {
         System.out.println("Please, select the type of bread you want ");
+        // Display breadTypes
         String breadType = scanner.nextLine();
 
-
         System.out.println("Please, select a size: ");
-
-
         int breadSize = scanner.nextInt();
         scanner.nextLine();
 
-        //sandwich.setbread(bread)
-
         System.out.println("Would you like a topping? ");
-        // Display premium toppings
-        //array of topping, add whatever user select
         List<Topping> toppings = new ArrayList<>();
         String topping = scanner.nextLine();
         if (topping.equalsIgnoreCase("Yes")) {
+            System.out.println("Select a meat of your choice: ");
+            // Display premium toppings
+            String premiumTopping = scanner.nextLine();
+            Topping userTopping = new PremiumTopping(premiumTopping);
+            toppings.add(userTopping);
+            System.out.println("Would you like to add extra meat? ");
+            String extraMeat = scanner.nextLine();
+            Boolean userExtraMeat = true;
+            if (extraMeat.equalsIgnoreCase("Yes")){
+                userExtraMeat = true;
+            }else if (extraMeat.equalsIgnoreCase("No")){
+                userExtraMeat = false;
+            }
+        }
+        System.out.println("Would you like some cheese? ");
+        String cheeseTopping = scanner.nextLine();
+        if (cheeseTopping.equalsIgnoreCase("Yes")) {
+            System.out.println("Select a cheese of your choice: ");
+            String cheeseChoice = scanner.nextLine();
+            Topping userCheese = new PremiumTopping(cheeseChoice);
+            toppings.add(userCheese);
+            System.out.println("Would you like extra cheese? ");
+            String extraCheese = scanner.nextLine();
+            Boolean userExtraCheese = true;
+            if (extraCheese.equalsIgnoreCase("Yes")){
+                userExtraCheese = true;
+            } else if (extraCheese.equalsIgnoreCase("No")){
+                userExtraCheese = false;
+            }
 
         }
+        System.out.println("Would you like a regular topping? ");
+        String regularToppingChoice = scanner.nextLine();
+        if (regularToppingChoice.equalsIgnoreCase("Yes")) {
+            System.out.println("Please, select the regular topping of your choice: ");
+            // Display regular toppings
+            String regularTopping = scanner.nextLine();
+            Topping userRegTopping = new RegularToppings(regularTopping);
+            toppings.add(userRegTopping);
+        }
+        System.out.println("Would you like a sauce? ");
+        String userSauceChoice = scanner.nextLine();
+        if (userSauceChoice.equalsIgnoreCase("Yes")) {
+            System.out.println("Here is a list of sauces");
+            //Display sauces
+            String sauce = scanner.nextLine();
+            Sauce userSauce = new Sauce(sauce);
+            toppings.add(userSauce);
+        }
+        System.out.println("Would you like the bread to be toasted? ");
+        String yesOrNo = scanner.nextLine();
+        Boolean isToastedBread = true;
+        if (yesOrNo.equalsIgnoreCase("Yes")) {
+            isToastedBread = true;
+        }else if (yesOrNo.equalsIgnoreCase("No")){
+            isToastedBread = false;
+        }
 
-//sandwich sandwich = new sandwich (size, bread, topping,...)
+
+
+        Sandwich sandwich = new Sandwich()
         //order.addsandwich(sandwich)
 
 
