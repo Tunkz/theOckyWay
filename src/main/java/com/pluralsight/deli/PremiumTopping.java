@@ -14,8 +14,6 @@ private boolean isMeat
     }
     public double getPrice(String size){
 
-        if (size.equalsIgnoreCase("S")){
-
-        }
+      return 0;
     }
 }
