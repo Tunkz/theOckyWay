@@ -76,4 +76,7 @@ public class Sandwich implements CostInterface {
     public double breadSizeInInches() {
         return 0;
     }
+    public void addTopping(PremiumTopping premiumTopping){
+        this.toppings.add(premiumTopping);
+    }
 }
