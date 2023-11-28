@@ -60,12 +60,12 @@ public class SandwichShop {
             System.out.println("2) Add Drink");
             System.out.println("3) Add Chips");
             System.out.println("4) Checkout");
-            System.out.println("0) Cancel Order");
+            System.out.println("x) Cancel Order");
             System.out.print("Please, select an option: ");
             String input = scanner.nextLine();
 
             String input1 = scanner.nextLine().trim();
-            switch (input1) {
+            switch (input1.toUpperCase()) {
                 case "1":
 
                     break;
@@ -76,9 +76,10 @@ public class SandwichShop {
 
                     break;
                 case "4":
-                    break;
-                case "0":
 
+                    break;
+                case "X":
+                    running = false;
                     break;
                 default:
                     System.out.println("Error! please select the right option from the ones provided!");
@@ -117,38 +118,7 @@ public class SandwichShop {
 
     }
 
-    private static void newOrder(Scanner scanner) {
-        boolean running = true;
-        while (running) {
-            System.out.println("Ready to order? Here are a variety of choices!");
-            System.out.println("Choose an option: ");
-            System.out.println("1) Add Sandwich");
-            System.out.println("2) Add Drink");
-            System.out.println("3) Add Chips");
-            System.out.println("4) Checkout");
-            System.out.println("x) Cancel Order");
 
-            String input = scanner.nextLine().trim();
-
-            switch (input.toUpperCase()) {
-                case "1":
-                    break;
-                case "2":
-                    break;
-                case "3":
-                    break;
-                case "4":
-                    break;
-                case "X":
-                    running = false;
-                    break;
-                default:
-                    System.out.println("Invalid Option! Please try again.");
-                    break;
-            }
-        }
-
-    }
 
 }
 
