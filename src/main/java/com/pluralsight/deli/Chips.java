@@ -2,17 +2,17 @@ package com.pluralsight.deli;
 
 public class Chips implements CostInterface {
 
-   private Chips chipType;
+   private String chipType;
 
-    public Chips(Chips chipType) {
+    public Chips(String chipType) {
         this.chipType = chipType;
     }
 
-    public Chips getChipType() {
+    public String getChipType() {
         return chipType;
     }
 
-    public void setChipType(Chips chipType) {
+    public void setChipType(String chipType) {
         this.chipType = chipType;
     }
 
