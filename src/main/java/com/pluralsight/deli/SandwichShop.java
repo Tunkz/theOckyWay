@@ -20,6 +20,10 @@ public class SandwichShop {
                 "└──────────────────────────────────────────────────────┘");
 
 
+
+
+        Scanner scanner = new Scanner(System.in);
+
         System.out.println("Please select an option: ");
         System.out.println("1) New Order");
         System.out.println("0) Exit ");
@@ -30,7 +34,6 @@ public class SandwichShop {
             case "1":
                 orderScreen();
                 break;
-
             case "0":
                 break;
             default:
@@ -38,6 +41,7 @@ public class SandwichShop {
 
 
         }
+
 
 
     }
@@ -109,6 +113,40 @@ public class SandwichShop {
 
 //sandwich sandwich = new sandwich (size, bread, topping,...)
         //order.addsandwich(sandwich)
+
+
+    }
+
+    private static void newOrder(Scanner scanner) {
+        boolean running = true;
+        while (running) {
+            System.out.println("Ready to order? Here are a variety of choices!");
+            System.out.println("Choose an option: ");
+            System.out.println("1) Add Sandwich");
+            System.out.println("2) Add Drink");
+            System.out.println("3) Add Chips");
+            System.out.println("4) Checkout");
+            System.out.println("x) Cancel Order");
+
+            String input = scanner.nextLine().trim();
+
+            switch (input.toUpperCase()) {
+                case "1":
+                    break;
+                case "2":
+                    break;
+                case "3":
+                    break;
+                case "4":
+                    break;
+                case "X":
+                    running = false;
+                    break;
+                default:
+                    System.out.println("Invalid Option! Please try again.");
+                    break;
+            }
+        }
 
     }
 
