@@ -10,7 +10,7 @@ public class SandwichShop {
     private List<Sandwich> sandwiches = new ArrayList<>();
     private List<Drink> drinks = new ArrayList<>();
     private List<Chips> chips = new ArrayList<>();
-    private final  Order order = new Order(sandwiches, drinks, chips);
+    private final Order order = new Order(sandwiches, drinks, chips);
 
     public static void main(String[] args) {
         System.out.println("┌──────────────────────────────────────────────────────┐\n" +
@@ -38,7 +38,9 @@ public class SandwichShop {
                 break;
             case "0":
 
+
                 orderScreen();
+
 
                 break;
             default:
@@ -49,6 +51,7 @@ public class SandwichShop {
 
 
     }
+
 
     private static void orderScreen() {
         boolean running = true;
@@ -143,6 +146,6 @@ public class SandwichShop {
         Chips chips = new Chips(type);
         order.addChips(chips);
     }
-
 }
+
 
