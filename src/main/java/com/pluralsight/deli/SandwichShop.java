@@ -129,5 +129,13 @@ public class SandwichShop {
         order.addDrink(drink);
     }
 
+    public void addChips() {
+        System.out.println("What flavor chips would you like?");
+        String type = scanner.nextLine();
+
+        Chips chips = new Chips(type);
+        order.addChips(chips);
+    }
+
 }
 
