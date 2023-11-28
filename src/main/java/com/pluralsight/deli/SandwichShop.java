@@ -20,22 +20,24 @@ public class SandwichShop {
                 "└──────────────────────────────────────────────────────┘");
 
         Scanner scanner = new Scanner(System.in);
-        System.out.println ("Please select an option: ");
+        System.out.println("Please select an option: ");
         System.out.println("1) New Order");
         System.out.println("0) Exit ");
         String input = scanner.nextLine().trim();
 
         switch (input) {
             case "1":
+
                 break;
-            case"0":
+            case "0":
+
                 break;
             default:
                 System.out.println("Error! Please select the right option from the provided ones!");
 
 
+        }
+
     }
-
-
 }
 
