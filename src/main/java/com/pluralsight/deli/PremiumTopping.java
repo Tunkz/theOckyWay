@@ -2,7 +2,7 @@ package com.pluralsight.deli;
 
 public class PremiumTopping extends Topping{
     private double price ;
-private boolean isMeat
+    private boolean isMeat;
     public PremiumTopping(String name) {
         super(name);
     }
