@@ -101,7 +101,7 @@ We would like to express our sincere gratitude to the following individuals and 
 A special thanks to [**Raymond**](https://github.com/RayMaroun) for his invaluable guidance, support, and expertise throughout the development process. His insights and advice have been crucial in shaping this project. 
 
 
-I am deeply grateful to the open-source community for providing a wealth of knowledge and resources that have been crucial in building this application. Open-source libraries, frameworks, and forums have been invaluable in overcoming challenges and learning.
+We are deeply grateful to the open-source community for providing a wealth of knowledge and resources that have been crucial in building this application. Open-source libraries, frameworks, and forums have been invaluable in overcoming challenges and learning.
 
 
 The Java development community has been an endless source of knowledge and inspiration. Countless online tutorials, forums, and documentation have been indispensable in understanding Java and its libraries. 
