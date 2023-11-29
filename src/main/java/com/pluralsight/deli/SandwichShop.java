@@ -25,7 +25,8 @@ public class SandwichShop {
 
 
         Scanner scanner = new Scanner(System.in);
-        while (true) {
+        boolean running = true;
+        while (running) {
             System.out.println("Please select an option: ");
             System.out.println("1) New Order");
             System.out.println("0) Exit ");
@@ -38,7 +39,7 @@ public class SandwichShop {
                     orderScreen();
                     break;
                 case "0":
-
+                    running = false;
                     break;
                 default:
                     System.out.println("Error! Please select the right option from the provided ones!");
@@ -81,10 +82,10 @@ public class SandwichShop {
                     addChips();
                     break;
                 case "4":
-
+                    checkOut();
                     break;
                 case "X":
-                    running = false;
+                    cancelOrder();
                     break;
                 default:
                     System.out.println("Error! please select the right option from the ones provided!");
@@ -203,6 +204,39 @@ public class SandwichShop {
 
     public void checkOut() {
         
+    }
+
+    public void cancelOrder() {
+        // cancel any items in bag/delete
+        //reroute user to main menu to exit application
+        System.out.println("Are you sure you want to cancel your order? ( Y | N )");
+        String confirmation = scanner.nextLine();
+
+        if (confirmation.equalsIgnoreCase("Y")) {
+            order.setSandwiches(null);
+            order.setDrinks(null);
+            order.setChips(null);
+            System.out.println("Order canceled successfully!");
+
+            boolean returnToMainMenu = true;
+
+            while (returnToMainMenu) {
+                System.out.println("Return to Main Menu? ( Y | N ): ");
+                String input = scanner.nextLine().trim();
+
+                if (input.equalsIgnoreCase("Y")) {
+                    returnToMainMenu = false;
+                } else if (input.equalsIgnoreCase("N")) {
+                    System.out.println("Exiting the application. Goodbye hope to see you again!");
+                    System.exit(0);
+                } else {
+                    System.out.println("Invalid option. Please try again.");
+                }
+            }
+
+        } else {
+            System.out.println("Order cancellation aborted.");
+        }
     }
 }
 
