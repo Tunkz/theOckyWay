@@ -40,4 +40,12 @@ public class Drink implements CostInterface {
 
         return getPrice();
     }
+
+    @Override
+    public String toString() {
+        return "Drink{" +
+                "size='" + size + '\'' +
+                ", flavor='" + flavor + '\'' +
+                '}';
+    }
 }

@@ -1,6 +1,5 @@
 package com.pluralsight.deli;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class Order implements CostInterface {
@@ -16,9 +15,8 @@ public class Order implements CostInterface {
     }
 
     public List<Sandwich> getSandwiches() {
-        List<Sandwich> sandwiches = new ArrayList<Sandwich>();
 
-        return sandwiches;
+        return this.sandwiches;
     }
 
     public void setSandwiches(List<Sandwich> sandwiches) {
@@ -26,9 +24,8 @@ public class Order implements CostInterface {
     }
 
     public List<Drink> getDrinks() {
-        List<Drink> drinks = new ArrayList<Drink>();
 
-        return drinks;
+        return this.drinks;
     }
 
     public void setDrinks(List<Drink> drinks) {
@@ -36,9 +33,9 @@ public class Order implements CostInterface {
     }
 
     public List<Chips> getChips() {
-        List<Chips> chips = new ArrayList<Chips>();
 
-        return chips;
+
+        return this.chips;
     }
 
     public void setChips(List<Chips> chips) {
@@ -65,7 +62,7 @@ public class Order implements CostInterface {
     }
 
     public void addChips(Chips chips) {
-        this.chips.add(chips);
+       this.chips.add(chips);
     }
 
     public void orderCheckOut() {
