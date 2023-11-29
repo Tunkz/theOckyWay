@@ -205,9 +205,14 @@ public class SandwichShop {
     }
 
     public void checkOut() {
+
+
+
+
         SandwichFileManager sandwichFileManager = new SandwichFileManager();
         sandwichFileManager.saveSandwichShop(order);
         System.out.println("Order has been checked out!");
+
     }
 
 
