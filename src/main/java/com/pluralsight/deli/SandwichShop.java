@@ -6,13 +6,14 @@ import java.util.Scanner;
 
 public class SandwichShop {
 
-    private final static Scanner scanner = new Scanner(System.in);
+    private final Scanner scanner = new Scanner(System.in);
     private List<Sandwich> sandwiches = new ArrayList<>();
     private List<Drink> drinks = new ArrayList<>();
     private List<Chips> chips = new ArrayList<>();
     private final Order order = new Order(sandwiches, drinks, chips);
 
-    public void main() {
+
+    public void mainMenu() {
         System.out.println("┌──────────────────────────────────────────────────────┐\n" +
                 "│                                                      │\n" +
                 "│                                                      │\n" +
@@ -67,7 +68,6 @@ public class SandwichShop {
             System.out.println("4) Checkout");
             System.out.println("x) Cancel Order");
             System.out.print("Please, select an option: ");
-            String input = scanner.nextLine();
 
             String input1 = scanner.nextLine().trim();
             switch (input1.toUpperCase()) {
@@ -202,8 +202,10 @@ public class SandwichShop {
     }
 
     public void checkOut() {
-        
+
     }
+
 }
+
 
 
