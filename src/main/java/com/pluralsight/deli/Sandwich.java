@@ -79,4 +79,16 @@ public class Sandwich implements CostInterface {
     public void addTopping(PremiumTopping premiumTopping){
         this.toppings.add(premiumTopping);
     }
+
+    @Override
+    public String toString() {
+        return "Sandwich{" +
+                "size=" + size +
+                ", breadType='" + breadType + '\'' +
+                ", toppings=" + toppings +
+                ", toasted=" + toasted +
+                ", extraCheese=" + extraCheese +
+                ", extraMeat=" + extraMeat +
+                '}';
+    }
 }

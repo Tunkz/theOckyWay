@@ -10,7 +10,7 @@ public class SandwichShop {
     private List<Sandwich> sandwiches = new ArrayList<>();
     private List<Drink> drinks = new ArrayList<>();
     private List<Chips> chips = new ArrayList<>();
-    private final Order order = new Order(sandwiches, drinks, chips);
+    private Order order = new Order(sandwiches, drinks, chips);
 
 
     public void mainMenu() {
@@ -83,9 +83,11 @@ public class SandwichShop {
                     break;
                 case "4":
                     checkOut();
+                    running= false;
                     break;
                 case "X":
                     cancelOrder();
+                    running=false;
                     break;
                 default:
                     System.out.println("Error! please select the right option from the ones provided!");
@@ -204,6 +206,12 @@ public class SandwichShop {
 
     public void checkOut() {
 
+
+
+
+        SandwichFileManager sandwichFileManager = new SandwichFileManager();
+        sandwichFileManager.saveSandwichShop(order);
+        System.out.println("Order has been checked out!");
 
     }
 
