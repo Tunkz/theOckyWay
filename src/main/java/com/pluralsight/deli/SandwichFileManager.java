@@ -51,8 +51,6 @@ public class SandwichFileManager {
             for (Chips chip : chips) {
                 receipt.write(chip.toString()+"\n");
             }
-
-
             receipt.close();
 
 
