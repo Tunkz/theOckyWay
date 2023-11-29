@@ -36,6 +36,8 @@ public class SandwichFileManager {
             receipt.close();
             try {
                 BufferedWriter writer = new BufferedWriter(new FileWriter(fileDateTime,true));
+            } catch (IOException e) {
+                throw new RuntimeException(e);
             }
 
         } catch (IOException e) {
