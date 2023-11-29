@@ -20,4 +20,11 @@ public class Chips implements CostInterface {
     public double getPrice() {
         return 1.5;
     }
+
+    @Override
+    public String toString() {
+        return "Chips{" +
+                "chipType='" + chipType + '\'' +
+                '}';
+    }
 }
