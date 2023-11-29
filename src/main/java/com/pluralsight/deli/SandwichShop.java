@@ -204,7 +204,9 @@ public class SandwichShop {
 
     public void checkOut() {
 
-    
+    }
+
+
     public void cancelOrder() {
         // cancel any items in bag/delete
         //reroute user to main menu to exit application
@@ -238,6 +240,8 @@ public class SandwichShop {
         }
     }
 }
+
+
 
 
 
