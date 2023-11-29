@@ -10,7 +10,10 @@ import java.time.LocalDateTime;
 public class SandwichFileManager {
     public void saveSandwichShop(SandwichShop sandwichShop) {
 
+        // Generate a unique file name based on the current date and time
         String receiptName = String.format("");
+        // Get the current date and time components
+        
         LocalDateTime localDateTime = LocalDateTime.now();
         String dayOfMonth = localDateTime.getDayOfMonth() + "";
         String monthDate = localDateTime.getMonthValue() + "";
@@ -19,18 +22,22 @@ public class SandwichFileManager {
         String minute = localDateTime.getMinute()+ "";
         String second = localDateTime.getSecond()+ "";
 
+        // Create a formatted string for the file name
         String fileDateTime = year+ monthDate+dayOfMonth+"-"+hour+minute+second+".txt";
 
         try {
+            // Create a new file using the generated file name
             File myFile = new File(fileDateTime);
             if (myFile.createNewFile()) {
                 System.out.println("Order Placed!");
             }
         } catch (IOException e) {
+            // Handle file creation exceptions
             e.printStackTrace();
         }
 
         try {
+            // Open a BufferedWriter to append content to the file
             BufferedWriter receipt = new BufferedWriter(new FileWriter(fileDateTime,true));
             receipt.write(receipt +  "\n");
             receipt.close();
