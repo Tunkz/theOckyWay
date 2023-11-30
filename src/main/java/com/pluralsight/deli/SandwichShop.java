@@ -179,7 +179,12 @@ public class SandwichShop {
         if (userSauceChoice.equalsIgnoreCase("Yes")) {
             System.out.println("Here is a list of sauces");
             //Display sauces
-            String sauce = scanner.nextLine();
+            /* Sauce sauce = new Sauce(String);
+            List<Sauce> sauces = sauce.getSauce();
+            for (Sauce x : sauces) {
+                System.out.println(x.getName());
+            }*/
+            String sauceInput = scanner.nextLine();
             Sauce userSauce = new Sauce(sauce);
             toppings.add(userSauce);
         }
