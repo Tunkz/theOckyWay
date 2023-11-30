@@ -25,7 +25,7 @@ public class SandwichFileManager {
 
 
         // Create a formatted string for the file name
-        String fileDateTime = year + monthDate + dayOfMonth + "-" + hour + minute + second + ".txt";
+        String fileDateTime = year + "/" + monthDate + "/" + dayOfMonth + "-" + hour + ":" + minute + ":" + second + ".txt";
 
         try {
             File myFile = new File("receipts/" + fileDateTime);
@@ -39,8 +39,8 @@ public class SandwichFileManager {
             BufferedWriter receipt = new BufferedWriter(new FileWriter("receipts/" + fileDateTime, true));
 
             //receipt.write(order.toString()+  "\n");
-            receipt.write("shop name: Kennedy Fried Chicken\n");
-            receipt.write("shop number: 718-222-8422\n");
+            receipt.write("Shop Name: The Ocky Way\n");
+            receipt.write("Shop Number: 718-222-8422\n");
             receipt.write(order.toString() + "\n");
             List<Sandwich> sandwiches = order.getSandwiches();
             receipt.close();
