@@ -1,5 +1,6 @@
 package com.pluralsight.deli;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Order implements CostInterface {
@@ -10,10 +11,14 @@ public class Order implements CostInterface {
     private List<Chips> chips;
 
     // Constructor to initialize the order with lists of sandwiches, drinks, and chips
-    public Order(List<Sandwich> sandwiches, List<Drink> drinks, List<Chips> chips) {
-        this.sandwiches = sandwiches;
-        this.drinks = drinks;
-        this.chips = chips;
+    public Order() {
+        this.sandwiches = new ArrayList<>();
+        this.drinks = new ArrayList<>();
+        this.chips = new ArrayList<>();
+    }
+
+    public void addSandwich(Sandwich sandwich){
+        sandwiches.add(sandwich);
     }
 
     // Getter and setter methods for sandwiches
@@ -57,8 +62,12 @@ public class Order implements CostInterface {
     // Override of the toString method to provide a string representation of the order
     @Override
     public String toString() {
+        // StringBuilder potato = new StringBuilder
+        // potato.toString
+
+
         return "\n" +
-                "Sandwiches = " + sandwiches + "\n" +
+                "Sandwiches: "  + "\n" +
                 "Drinks = " + drinks + "\n" +
                 "Chips = " + chips;
     }

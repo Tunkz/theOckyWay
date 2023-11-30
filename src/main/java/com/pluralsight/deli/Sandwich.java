@@ -1,5 +1,6 @@
 package com.pluralsight.deli;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class Sandwich implements CostInterface {
@@ -11,10 +12,10 @@ public class Sandwich implements CostInterface {
     private boolean extraMeat;
 
 
-    public Sandwich(int size, String breadType, List<Topping> toppings, boolean toasted, boolean extraCheese, boolean extraMeat) {
+    public Sandwich(int size, String breadType, boolean toasted, boolean extraCheese, boolean extraMeat) {
         this.size = size;
         this.breadType = breadType;
-        this.toppings = toppings;
+        this.toppings = new ArrayList<>();
         this.toasted = toasted;
         this.extraCheese = extraCheese;
         this.extraMeat = extraMeat;
