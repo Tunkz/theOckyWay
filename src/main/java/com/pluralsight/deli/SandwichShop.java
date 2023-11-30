@@ -119,9 +119,6 @@ public class SandwichShop {
     public void processAddSandwich() {
         // Prompt the user to customize a sandwich
         System.out.println("Please, select the type of bread you want ");
-        // Display breadTypes
-        BreadTypes breadTypes = new BreadTypes();
-        breadTypes.breadTypes();
         //System.out.println("U+1F449");
         String breadType = scanner.nextLine();
 
@@ -129,7 +126,7 @@ public class SandwichShop {
 
         int size = scanner.nextInt();
 
-        //Display sizes
+        
 
         int breadSize = scanner.nextInt();
         scanner.nextLine();
@@ -197,7 +194,7 @@ public class SandwichShop {
                 System.out.println(x.getName());
             }*/
             String sauceInput = scanner.nextLine();
-            Sauce userSauce = new Sauce(sauce);
+            Sauce userSauce = new Sauce("");
             toppings.add(userSauce);
         }
         System.out.println("Would you like the bread to be toasted? ");
