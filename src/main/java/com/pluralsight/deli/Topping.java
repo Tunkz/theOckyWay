@@ -19,4 +19,11 @@ public abstract class Topping implements CostInterface{
     public double getPrice() {
         return 0;
     }
+
+    @Override
+    public String toString() {
+        return "Topping" +
+                "name='" + name + '\'' +
+                '}';
+    }
 }

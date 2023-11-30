@@ -1,4 +1,0 @@
-shop name: 
-shop numberOrder{sandwiches=[], drinks=[Drink{size='l', flavor='coke'}], chips=[Chips{chipType='vinegar'}]}
-Drink{size='l', flavor='coke'}
-Chips{chipType='vinegar'}
