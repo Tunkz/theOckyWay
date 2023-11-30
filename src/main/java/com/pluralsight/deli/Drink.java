@@ -29,20 +29,18 @@ public class Drink implements CostInterface {
     @Override
     public double getPrice() {
 
-        String size = "null";
-        if (size.equalsIgnoreCase("S")) {
+
+        if (this.size.equalsIgnoreCase("S")) {
             return 2.00;
-        } else if (size.equalsIgnoreCase("M")) {
+        } else if (this.size.equalsIgnoreCase("M")) {
             return 2.50;
-        } else if (size.equalsIgnoreCase("L")) {
-            return 3.00;
         }
 
-        return getPrice();
+        return 3.0;
     }
 
     @Override
     public String toString() {
-        return String.format("Drink { size = %s, flavor = %s}", size,flavor );
+        return String.format("\nSize "+this.size+", Flavor "+this.flavor);
     }
 }
