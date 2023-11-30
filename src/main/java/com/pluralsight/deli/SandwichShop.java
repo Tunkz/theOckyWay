@@ -14,93 +14,106 @@ public class SandwichShop {
 
 
     public void mainMenu() {
-        System.out.println("┌──────────────────────────────────────────────────────┐\n" +
-                "│                                                      │\n" +
-                "│                                                      │\n" +
-                "│                                                      │\n" +
-                "│        Hello! Welcome to the Sandwich shop!          │\n" +
-                "│                                                      │\n" +
-                "│                                                      │\n" +
-                "│                                                      │\n" +
-                "└──────────────────────────────────────────────────────┘");
+        try {
+            Thread.sleep(100);
+
+
+            System.out.println("┌──────────────────────────────────────────────────────┐\n" +
+                    "│                                                      │\n" +
+                    "│                                                      │\n" +
+                    "│                                                      │\n" +
+                    "│        Hello! Welcome to the Sandwich shop!          │\n" +
+                    "│                                                      │\n" +
+                    "│                                                      │\n" +
+                    "│                                                      │\n" +
+                    "└──────────────────────────────────────────────────────┘");
 
             //Display welcome message and menu options
             // prompts user to start order
-        Scanner scanner = new Scanner(System.in);
-        boolean running = true;
-        while (running) {
-            System.out.println("Please select an option: ");
-            System.out.println("1) New Order");
-            System.out.println("0) Exit ");
-            System.out.print("Select a number: ");
-            String input = scanner.nextLine().trim();
+            Scanner scanner = new Scanner(System.in);
+            boolean running = true;
+            while (running) {
+                System.out.println("Please select an option: ");
+                System.out.println("1) New Order");
+                System.out.println("0) Exit ");
+                System.out.print("Select a number: ");
+                String input = scanner.nextLine().trim();
 
 
-            switch (input) {
-                case "1":
-                    orderScreen();
-                    break;
-                case "0":
-                    running = false;
-                    break;
-                default:
-                    System.out.println("Error! Please select the right option from the provided ones!");
+                switch (input) {
+                    case "1":
+                        orderScreen();
+                        break;
+                    case "0":
+                        running = false;
+                        break;
+                    default:
+                        System.out.println("Error! Please select the right option from the provided ones!");
 
-
+                }
             }
+
+        } catch (Exception e) {
+
         }
 
 
     }
 
-        //
+    //
     public void orderScreen() {
         boolean running = true;
         while (running) {
-            System.out.println("┌──────────────────────────────────────────────────────┐\n" +
-                    "│                                                      │\n" +
-                    "│                                                      │\n" +
-                    "│                   Order Screen                       │\n" +
-                    "│                                                      │\n" +
-                    "│                                                      │\n" +
-                    "└──────────────────────────────────────────────────────┘");
-            System.out.println("1) Add Sandwich");
-            System.out.println("2) Add Drink");
-            System.out.println("3) Add Chips");
-            System.out.println("4) Checkout");
-            System.out.println("x) Cancel Order");
-            System.out.print("Please, select an option: ");
-            //Display the order screen with different options
-            //Prompts the User to add either a sandwich,drink, or chips to their order or checkout or cancel
-            //Based on User's input calls on next method
+            try {
+                Thread.sleep(2000);
 
-            String input1 = scanner.nextLine().trim();
-            switch (input1.toUpperCase()) {
-                case "1":
-                    processAddSandwich();
-                    break;
-                case "2":
-                    addDrink();
-                    break;
-                case "3":
-                    addChips();
-                    break;
-                case "4":
-                    checkOut();
-                    running = false;
-                    break;
-                case "X":
-                    cancelOrder();
-                    running = false;
-                    break;
-                default:
-                    System.out.println("Error! please select the right option from the ones provided!");
+                System.out.println("┌──────────────────────────────────────────────────────┐\n" +
+                        "│                                                      │\n" +
+                        "│                                                      │\n" +
+                        "│                   Order Screen                       │\n" +
+                        "│                                                      │\n" +
+                        "│                                                      │\n" +
+                        "└──────────────────────────────────────────────────────┘");
+                System.out.println("1) Add Sandwich");
+                System.out.println("2) Add Drink");
+                System.out.println("3) Add Chips");
+                System.out.println("4) Checkout");
+                System.out.println("x) Cancel Order");
+                System.out.print("Please, select an option: ");
+                //Display the order screen with different options
+                //Prompts the User to add either a sandwich,drink, or chips to their order or checkout or cancel
+                //Based on User's input calls on next method
 
+                String input1 = scanner.nextLine().trim();
+                switch (input1.toUpperCase()) {
+                    case "1":
+                        processAddSandwich();
+                        break;
+                    case "2":
+                        addDrink();
+                        break;
+                    case "3":
+                        addChips();
+                        break;
+                    case "4":
+                        checkOut();
+                        running = false;
+                        break;
+                    case "X":
+                        cancelOrder();
+                        running = false;
+                        break;
+                    default:
+                        System.out.println("Error! please select the right option from the ones provided!");
+
+
+                }
+
+            } catch (Exception e) {
 
             }
 
         }
-
     }
 
     public void processAddSandwich() {
@@ -112,10 +125,9 @@ public class SandwichShop {
         //System.out.println("U+1F449");
         String breadType = scanner.nextLine();
 
-        System.out.println("Please, select a size: ");
+        System.out.println("Please, select a size(4\", 6\", 12\"):");
 
-        Sizes sizes = new Sizes();
-        sizes.sizeInInches();
+        int size = scanner.nextInt();
 
         //Display sizes
 
@@ -193,7 +205,7 @@ public class SandwichShop {
             isToastedBread = false;
         }
 
-        Sandwich sandwich = new Sandwich(breadSize, breadType, toppings, isToastedBread, userExtraCheese, userExtraMeat);
+        Sandwich sandwich = new Sandwich(breadSize, breadType, isToastedBread, userExtraCheese, userExtraMeat);
         order.addSandwichToOrder(sandwich);
 
 
@@ -250,9 +262,8 @@ public class SandwichShop {
             order.setSandwiches(null);
             order.setDrinks(null);
 
-          
-          
-          order.setChips(null);
+
+            order.setChips(null);
             // If confirmed, set sandwich, drink, and chips lists to null, print a cancellation message
             System.out.println("Order canceled successfully!");
 
