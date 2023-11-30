@@ -1,0 +1,5 @@
+Shop Name: The Ocky Way
+Shop Number: 718-222-8422
+Sandwiches =Sandwich size = 4, breadType = white, toppings = [], toasted = yes, extraCheese = true, extraMeat = true
+ Drinks = Size: s, Flavor:coke
+ Chips = ChipType = 3ChipType = bbq

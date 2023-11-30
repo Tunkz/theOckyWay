@@ -21,8 +21,8 @@ public class Sauce extends Topping {
         Sauce.add(new Sauce("ranch"));
         Sauce.add(new Sauce("BBQ"));
         Sauce.add(new Sauce("mustard"));
-        Sauce.add(new Sauce("thousand islands"));
-        Sauce.add(new Sauce("vinaigrette"));
+        Sauce.add(new Sauce("Thousand islands"));
+        Sauce.add(new Sauce("Vinaigrette"));
         return Sauce;
     }
 

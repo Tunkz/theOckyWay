@@ -5,7 +5,6 @@ import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.time.LocalDateTime;
-import java.util.List;
 
 
 public class SandwichFileManager {
@@ -42,7 +41,6 @@ public class SandwichFileManager {
             receipt.write("Shop Name: The Ocky Way\n");
             receipt.write("Shop Number: 718-222-8422\n");
             receipt.write(order.toString() + "\n");
-            List<Sandwich> sandwiches = order.getSandwiches();
             receipt.close();
         } catch (IOException e) {
             throw new RuntimeException(e);

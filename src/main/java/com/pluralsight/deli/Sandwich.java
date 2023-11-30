@@ -71,7 +71,29 @@ public class Sandwich implements CostInterface {
 
     @Override
     public double getPrice() {
-        return 0;
+        double price = 0;
+
+        if (this.size == 4){
+            price+=5.50;
+            if(extraMeat)price+=.5;
+            if(extraCheese)price+=.3;
+        }else if (this.size ==8){
+            price+= 7;
+            if(extraMeat)price+=1;
+            if(extraCheese)price+=.6;
+        } else  {
+            price +=8.50;
+            if(extraMeat)price+=1.5;
+            if(extraCheese)price+=.9;
+        }
+
+        for (Topping x:toppings){
+            if(x instanceof PremiumTopping){
+                ((PremiumTopping) x).getPrice(this.size+"");
+            }
+        }
+
+        return price;
     }
 
     public double breadSizeInInches() {
@@ -83,16 +105,21 @@ public class Sandwich implements CostInterface {
 
     @Override
     public String toString() {
-        String toastedTemp = "yes";
-        if (toasted == false){
-            toastedTemp = "No";
+//        String toastedTemp = "yes";
+//        if (toasted == false){
+//            toastedTemp = "No";
+//        }
+        String AllToppings = "";
+        for (Topping x:toppings){
+            AllToppings+= x.getName()+" ";
         }
-        return "Sandwich " +
-                "size = " + size +
-                ", breadType = " + breadType +
-                ", toppings = " + toppings +
-                ", toasted = " + toastedTemp +
-                ", extraCheese = " + extraCheese +
-                ", extraMeat = " + extraMeat;
+        if(toppings.isEmpty())AllToppings += "no topping";
+        return "\nSandwich " +
+                "\nsize = " + size +
+                ", \nbreadType = " + breadType +
+                ", \ntoppings = " + AllToppings +
+                ", \ntoasted = " + (toasted?"Yes":"No") +
+                ", \nextraCheese = " + (extraCheese?"Yes":"No") +
+                ",\nextraMeat = " + (extraMeat?"Yes":"No");
     }
 }
