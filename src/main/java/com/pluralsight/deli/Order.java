@@ -4,16 +4,19 @@ import java.util.List;
 
 public class Order implements CostInterface {
 
+    // Lists to store items in the order
     private List<Sandwich> sandwiches;
     private List<Drink> drinks;
     private List<Chips> chips;
 
+    // Constructor to initialize the order with lists of sandwiches, drinks, and chips
     public Order(List<Sandwich> sandwiches, List<Drink> drinks, List<Chips> chips) {
         this.sandwiches = sandwiches;
         this.drinks = drinks;
         this.chips = chips;
     }
 
+    // Getter and setter methods for sandwiches
     public List<Sandwich> getSandwiches() {
 
         return this.sandwiches;
@@ -23,6 +26,7 @@ public class Order implements CostInterface {
         this.sandwiches = sandwiches;
     }
 
+    // Getter and setter methods for drinks
     public List<Drink> getDrinks() {
 
         return this.drinks;
@@ -32,6 +36,7 @@ public class Order implements CostInterface {
         this.drinks = drinks;
     }
 
+    // Getter and setter methods for chips
     public List<Chips> getChips() {
 
 
@@ -42,11 +47,13 @@ public class Order implements CostInterface {
         this.chips = chips;
     }
 
+    // Method to add a sandwich to the order
     public void addSandwichToOrder(Sandwich sandwich) {
         this.sandwiches.add(sandwich);
 
     }
 
+    // Override of the toString method to provide a string representation of the order
     @Override
     public String toString() {
         return "Order{" +
@@ -56,11 +63,13 @@ public class Order implements CostInterface {
                 '}';
     }
 
+    // Method to add a drink to the order
     public void addDrinkToOrder(Drink drink) {
         this.drinks.add(drink);
 
     }
 
+    // Method to add chips to the order
     public void addChips(Chips chips) {
        this.chips.add(chips);
     }
@@ -69,6 +78,7 @@ public class Order implements CostInterface {
 
     }
 
+    // Method to calculate the total price of the order
     @Override
     public double getPrice() {
 
