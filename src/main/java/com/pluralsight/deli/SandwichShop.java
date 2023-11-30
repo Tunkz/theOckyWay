@@ -24,7 +24,8 @@ public class SandwichShop {
                 "│                                                      │\n" +
                 "└──────────────────────────────────────────────────────┘");
 
-
+            //Display welcome message and menu options
+            // prompts user to start order
         Scanner scanner = new Scanner(System.in);
         boolean running = true;
         while (running) {
@@ -52,7 +53,7 @@ public class SandwichShop {
 
     }
 
-
+        //
     public void orderScreen() {
         boolean running = true;
         while (running) {
@@ -69,6 +70,9 @@ public class SandwichShop {
             System.out.println("4) Checkout");
             System.out.println("x) Cancel Order");
             System.out.print("Please, select an option: ");
+            //Display the order screen with different options
+            //Prompts the User to add either a sandwich,drink, or chips to their order or checkout or cancel
+            //Based on User's input calls on next method
 
             String input1 = scanner.nextLine().trim();
             switch (input1.toUpperCase()) {
@@ -100,6 +104,7 @@ public class SandwichShop {
     }
 
     public void processAddSandwich() {
+        // Prompt the user to customize a sandwich
         System.out.println("Please, select the type of bread you want ");
         // Display breadTypes
         BreadTypes breadTypes = new BreadTypes();
@@ -108,8 +113,12 @@ public class SandwichShop {
         String breadType = scanner.nextLine();
 
         System.out.println("Please, select a size: ");
+
         Sizes sizes = new Sizes();
         sizes.sizeInInches();
+
+        //Display sizes
+
         int breadSize = scanner.nextInt();
         scanner.nextLine();
 
@@ -175,6 +184,7 @@ public class SandwichShop {
             toppings.add(userSauce);
         }
         System.out.println("Would you like the bread to be toasted? ");
+        //Give User option to toast bread or leave untoasted
         String yesOrNo = scanner.nextLine();
         Boolean isToastedBread = true;
         if (yesOrNo.equalsIgnoreCase("Yes")) {
@@ -190,10 +200,12 @@ public class SandwichShop {
     }
 
     public void addDrink() {
+        //Prompts user to add drink
         String sizes;
         while (true) {
             System.out.println("What size of drink would you like? ( S | M | L )");
             sizes = scanner.nextLine();
+            // Asks User for size of drink
             if (sizes.equalsIgnoreCase("S") || sizes.equalsIgnoreCase("M") || sizes.equalsIgnoreCase("L")) {
                 break;
             } else {
@@ -201,6 +213,7 @@ public class SandwichShop {
             }
         }
         System.out.println("Please select a drink of your choice: ");
+        //Prompts user to choose preferred flavor of drink
         String flavor = scanner.nextLine();
 
         Drink drink = new Drink(sizes, flavor);
@@ -210,12 +223,14 @@ public class SandwichShop {
     public void addChips() {
         System.out.println("What flavor of chips would you like?");
         String type = scanner.nextLine();
-
+        // Prompt the user to select the flavor of chips
         Chips chips = new Chips(type);
         order.addChips(chips);
     }
 
     public void checkOut() {
+        // Save the current order details to a file using SandwichFileManager
+        // Print a confirmation message indicating the order has been checked out
 
 
         SandwichFileManager sandwichFileManager = new SandwichFileManager();
@@ -234,7 +249,11 @@ public class SandwichShop {
         if (confirmation.equalsIgnoreCase("Y")) {
             order.setSandwiches(null);
             order.setDrinks(null);
-            order.setChips(null);
+
+          
+          
+          order.setChips(null);
+            // If confirmed, set sandwich, drink, and chips lists to null, print a cancellation message
             System.out.println("Order canceled successfully!");
 
             boolean returnToMainMenu = true;
