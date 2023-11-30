@@ -25,6 +25,8 @@ public class Order implements CostInterface {
     public void setSandwiches(List<Sandwich> sandwiches) {
         this.sandwiches = sandwiches;
     }
+
+
     // Getter and setter methods for drinks
     public List<Drink> getDrinks() {
 
@@ -35,6 +37,7 @@ public class Order implements CostInterface {
         this.drinks = drinks;
     }
 
+    // Getter and setter methods for chips
     public List<Chips> getChips() {
 
 
@@ -45,11 +48,13 @@ public class Order implements CostInterface {
         this.chips = chips;
     }
 
+    // Method to add a sandwich to the order
     public void addSandwichToOrder(Sandwich sandwich) {
         this.sandwiches.add(sandwich);
 
     }
 
+    // Override of the toString method to provide a string representation of the order
     @Override
     public String toString() {
         return "Order{" +
@@ -59,11 +64,13 @@ public class Order implements CostInterface {
                 '}';
     }
 
+    // Method to add a drink to the order
     public void addDrinkToOrder(Drink drink) {
         this.drinks.add(drink);
 
     }
 
+    // Method to add chips to the order
     public void addChips(Chips chips) {
        this.chips.add(chips);
     }
@@ -72,6 +79,7 @@ public class Order implements CostInterface {
 
     }
 
+    // Method to calculate the total price of the order
     @Override
     public double getPrice() {
 
