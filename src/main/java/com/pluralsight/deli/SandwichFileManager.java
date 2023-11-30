@@ -43,9 +43,6 @@ public class SandwichFileManager {
             receipt.write("shop number: 718-222-8422\n");
             receipt.write(order.toString() + "\n");
             List<Sandwich> sandwiches = order.getSandwiches();
-            for (Sandwich sandwich : sandwiches) {
-                receipt.write(sandwich.toString() + "\n");
-            }
             receipt.close();
         } catch (IOException e) {
             throw new RuntimeException(e);

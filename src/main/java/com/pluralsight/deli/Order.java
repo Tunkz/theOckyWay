@@ -58,9 +58,9 @@ public class Order implements CostInterface {
     @Override
     public String toString() {
         return "\n" +
-                "Sandwiches = " + sandwiches + "\n"+
-                "Drinks = " + drinks + "\n"+
-                "Chips = " + chips + ".";
+                "Sandwiches = " + sandwiches + "\n" +
+                "Drinks = " + drinks + "\n" +
+                "Chips = " + chips;
     }
 
     // Method to add a drink to the order
@@ -71,11 +71,7 @@ public class Order implements CostInterface {
 
     // Method to add chips to the order
     public void addChips(Chips chips) {
-       this.chips.add(chips);
-    }
-
-    public void orderCheckOut() {
-
+        this.chips.add(chips);
     }
 
     // Method to calculate the total price of the order

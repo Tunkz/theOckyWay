@@ -83,11 +83,11 @@ public class SandwichShop {
                     break;
                 case "4":
                     checkOut();
-                    running= false;
+                    running = false;
                     break;
                 case "X":
                     cancelOrder();
-                    running=false;
+                    running = false;
                     break;
                 default:
                     System.out.println("Error! please select the right option from the ones provided!");
@@ -102,9 +102,14 @@ public class SandwichShop {
     public void processAddSandwich() {
         System.out.println("Please, select the type of bread you want ");
         // Display breadTypes
+        BreadTypes breadTypes = new BreadTypes();
+        breadTypes.breadTypes();
+        //System.out.println("U+1F449");
         String breadType = scanner.nextLine();
 
         System.out.println("Please, select a size: ");
+        Sizes sizes = new Sizes();
+        sizes.sizeInInches();
         int breadSize = scanner.nextInt();
         scanner.nextLine();
 
@@ -115,6 +120,11 @@ public class SandwichShop {
         if (topping.equalsIgnoreCase("Yes")) {
             System.out.println("Select a meat of your choice: ");
             // Display premium toppings
+            PremiumTopping premiumToppingTemp = new PremiumTopping();
+            List<PremiumTopping> premiumToppings = premiumToppingTemp.getPremiumToppings();
+            for (Topping x : premiumToppings) {
+                System.out.println(x.getName());
+            }
             String premiumTopping = scanner.nextLine();
             Topping userTopping = new PremiumTopping(premiumTopping);
             toppings.add(userTopping);
@@ -149,7 +159,8 @@ public class SandwichShop {
         String regularToppingChoice = scanner.nextLine();
         if (regularToppingChoice.equalsIgnoreCase("Yes")) {
             System.out.println("Please, select the regular topping of your choice: ");
-            // Display regular toppings
+            // Display premium toppings
+
             String regularTopping = scanner.nextLine();
             Topping userRegTopping = new RegularToppings(regularTopping);
             toppings.add(userRegTopping);
@@ -205,8 +216,6 @@ public class SandwichShop {
     }
 
     public void checkOut() {
-
-
 
 
         SandwichFileManager sandwichFileManager = new SandwichFileManager();

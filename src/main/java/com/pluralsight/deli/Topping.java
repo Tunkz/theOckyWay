@@ -7,6 +7,10 @@ public abstract class Topping implements CostInterface{
         this.name = name;
     }
 
+    public Topping() {
+
+    }
+
     public String getName() {
         return name;
     }
@@ -23,7 +27,6 @@ public abstract class Topping implements CostInterface{
     @Override
     public String toString() {
         return "Topping" +
-                "name='" + name + '\'' +
-                '}';
+                "name = " + name ;
     }
 }
