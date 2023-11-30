@@ -29,6 +29,6 @@ public class Chips implements CostInterface {
     // Override of the toString method to provide a string representation of the chips
     @Override
     public String toString() {
-        return String.format("Chips { chipType = %s }", chipType);
+        return String.format("ChipType = " + chipType);
     }
 }

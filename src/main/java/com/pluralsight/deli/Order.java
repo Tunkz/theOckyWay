@@ -57,10 +57,28 @@ public class Order implements CostInterface {
     // Override of the toString method to provide a string representation of the order
     @Override
     public String toString() {
-        return "\n" +
-                "Sandwiches = " + sandwiches + "\n" +
-                "Drinks = " + drinks + "\n" +
-                "Chips = " + chips;
+//         "\n" +
+//                "Sandwiches = " + sandwiches + "\n" +
+//                "Drinks = " + drinks + "\n" +
+//                "Chips = " + chips;
+    StringBuilder stringBuilder = new StringBuilder();
+    stringBuilder.append("Sandwiches = \n");
+        for (Sandwich x: sandwiches) {
+            stringBuilder.append(x.toString());
+        }
+    stringBuilder.append("Drinks = \n");
+        for(Drink x:drinks){
+            stringBuilder.append(x.toString());
+        }
+    stringBuilder.append("Chips = ").append(chips);
+        for (Chips x:chips){
+            stringBuilder.append(x.toString());
+        }
+
+  //  stringBuilder.toString();
+       // System.out.println(stringBuilder.toString());
+
+        return stringBuilder.toString();
     }
 
     // Method to add a drink to the order

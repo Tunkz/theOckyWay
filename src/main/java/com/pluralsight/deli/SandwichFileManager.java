@@ -25,7 +25,7 @@ public class SandwichFileManager {
 
 
         // Create a formatted string for the file name
-        String fileDateTime = year + "/" + monthDate + "/" + dayOfMonth + "-" + hour + ":" + minute + ":" + second + ".txt";
+        String fileDateTime = year + monthDate + dayOfMonth + "-" + hour + minute + second + ".txt";
 
         try {
             File myFile = new File("receipts/" + fileDateTime);
