@@ -43,9 +43,8 @@ public class Drink implements CostInterface {
 
     @Override
     public String toString() {
-        return "Drink{" +
-                "size='" + size + '\'' +
-                ", flavor='" + flavor + '\'' +
-                '}';
+        return "Drink" +
+                "size = " + size +
+                ", flavor = " + flavor;
     }
 }

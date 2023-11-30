@@ -1,0 +1,8 @@
+shop name: Kennedy Fried Chicken
+shop number: 718-222-8422
+
+ sandwiches =[]
+, drinks =[Drink{size='s', flavor='df'}]
+, chips =[Chips{chipType='gah'}].
+Drink{size='s', flavor='df'}
+Chips{chipType='gah'}

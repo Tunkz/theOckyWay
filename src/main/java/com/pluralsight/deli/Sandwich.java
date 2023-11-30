@@ -82,13 +82,12 @@ public class Sandwich implements CostInterface {
 
     @Override
     public String toString() {
-        return "Sandwich{" +
-                "size=" + size +
-                ", breadType='" + breadType + '\'' +
-                ", toppings=" + toppings +
-                ", toasted=" + toasted +
-                ", extraCheese=" + extraCheese +
-                ", extraMeat=" + extraMeat +
-                '}';
+        return "Sandwich " +
+                "size = " + size +
+                ", breadType = " + breadType +
+                ", toppings = " + toppings +
+                ", toasted = " + toasted +
+                ", extraCheese = " + extraCheese +
+                ", extraMeat = " + extraMeat;
     }
 }

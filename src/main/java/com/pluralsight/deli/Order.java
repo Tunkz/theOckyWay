@@ -57,11 +57,10 @@ public class Order implements CostInterface {
     // Override of the toString method to provide a string representation of the order
     @Override
     public String toString() {
-        return "Order{" +
-                "sandwiches=" + sandwiches +
-                ", drinks=" + drinks +
-                ", chips=" + chips +
-                '}';
+        return "\n" +
+                "Sandwiches = " + sandwiches + "\n"+
+                "Drinks = " + drinks + "\n"+
+                "Chips = " + chips + ".";
     }
 
     // Method to add a drink to the order

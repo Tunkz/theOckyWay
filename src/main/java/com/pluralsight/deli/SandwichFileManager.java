@@ -28,62 +28,28 @@ public class SandwichFileManager {
         String fileDateTime = year + monthDate + dayOfMonth + "-" + hour + minute + second + ".txt";
 
         try {
-            // Create a new file using the generated file name
-            File myFile = new File(fileDateTime);
-
-           // String fileDateTime = year + monthDate + dayOfMonth + "-" + hour + minute + second + ".txt";
-
-            try {
-                File myFile = new File("receipts/" + fileDateTime);
-
-                if (myFile.createNewFile()) {
-                    System.out.println("Order Placed!");
-                }
-            } catch (IOException e) {
-                // Handle file creation exceptions
-                e.printStackTrace();
-            }
-
-            try {
-
-                // Open a BufferedWriter to append content to the file
-                BufferedWriter receipt = new BufferedWriter(new FileWriter(fileDateTime, true));
-                receipt.write(receipt + "\n");
-                receipt.close();
-                try {
-                    BufferedWriter writer = new BufferedWriter(new FileWriter(fileDateTime, true));
-                } catch (IOException e) {
-                    throw new RuntimeException(e);
-
-                    BufferedWriter receipt = new BufferedWriter(new FileWriter("receipts/" + fileDateTime, true));
-
-                    //receipt.write(order.toString()+  "\n");
-                    receipt.write("shop name: \n");
-                    receipt.write("shop number");
-                    receipt.write(order.toString() + "\n");
-                    List<Sandwich> sandwiches = order.getSandwiches();
-                    for (Sandwich sandwich : sandwiches) {
-                        receipt.write(sandwich.toString() + "\n");
-                    }
-
-                    List<Drink> drinks = order.getDrinks();
-                    for (Drink drink : drinks) {
-                        receipt.write(drink.toString() + "\n");
-
-                    }
-                    List<Chips> chips = order.getChips();
-                    for (Chips chip : chips) {
-                        receipt.write(chip.toString() + "\n");
-                    }
-                    receipt.close();
-
-
+            File myFile = new File("receipts/" + fileDateTime);
+            if (myFile.createNewFile()) {
+                System.out.println("Order placed!");
             }
         } catch (IOException e) {
-                throw new RuntimeException(e);
-            }
-        } catch (RuntimeException e) {
             throw new RuntimeException(e);
         }
+        try {
+            BufferedWriter receipt = new BufferedWriter(new FileWriter("receipts/" + fileDateTime, true));
+
+            //receipt.write(order.toString()+  "\n");
+            receipt.write("shop name: Kennedy Fried Chicken\n");
+            receipt.write("shop number: 718-222-8422\n");
+            receipt.write(order.toString() + "\n");
+            List<Sandwich> sandwiches = order.getSandwiches();
+            for (Sandwich sandwich : sandwiches) {
+                receipt.write(sandwich.toString() + "\n");
+            }
+            receipt.close();
+        } catch (IOException e) {
+            throw new RuntimeException(e);
+        }
+
     }
 }

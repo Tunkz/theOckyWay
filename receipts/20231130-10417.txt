@@ -1,0 +1,8 @@
+shop name: Kennedy Fried Chicken
+shop number: 718-222-8422
+
+ Sandwiches =[]
+Drinks =[Drinksize =m, flavor =coke']
+Chips =[ChipschipType =lays].
+Drinksize =m, flavor =coke'
+ChipschipType =lays

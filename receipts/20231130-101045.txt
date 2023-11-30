@@ -1,0 +1,7 @@
+shop name: Kennedy Fried Chicken
+shop number: 718-222-8422
+
+Sandwiches = [Sandwich size=4, breadType='wheat', toppings=[com.pluralsight.deli.PremiumTopping@27fa135a, com.pluralsight.deli.PremiumTopping@46f7f36a], toasted=true, extraCheese=true, extraMeat=true}]
+Drinks = [Drinksize =s, flavor = s]
+Chips = [Chips chipType = bbq].
+Sandwich size=4, breadType='wheat', toppings=[com.pluralsight.deli.PremiumTopping@27fa135a, com.pluralsight.deli.PremiumTopping@46f7f36a], toasted=true, extraCheese=true, extraMeat=true}
