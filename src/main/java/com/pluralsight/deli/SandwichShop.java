@@ -10,12 +10,12 @@ public class SandwichShop {
     private List<Sandwich> sandwiches = new ArrayList<>();
     private List<Drink> drinks = new ArrayList<>();
     private List<Chips> chips = new ArrayList<>();
-    private Order order = new Order(sandwiches, drinks, chips);
+    private Order order = new Order();
 
 
     public void mainMenu() {
         try {
-            Thread.sleep(100);
+            Thread.sleep(10);
 
 
             System.out.println("┌──────────────────────────────────────────────────────┐\n" +
@@ -118,17 +118,14 @@ public class SandwichShop {
 
     public void processAddSandwich() {
         // Prompt the user to customize a sandwich
-        System.out.println("Please, select the type of bread you want ");
+        System.out.println("Please, select the type of bread you want \nWhite\nWheat\nrye\nwrap");
         //System.out.println("U+1F449");
+
         String breadType = scanner.nextLine();
 
         System.out.println("Please, select a size(4\", 6\", 12\"):");
 
         int size = scanner.nextInt();
-
-        
-
-        int breadSize = scanner.nextInt();
         scanner.nextLine();
 
         System.out.println("Would you like a topping? ");
@@ -144,7 +141,8 @@ public class SandwichShop {
                 System.out.println(x.getName());
             }
             String premiumTopping = scanner.nextLine();
-            Topping userTopping = new PremiumTopping(premiumTopping);
+            Topping userTopping = new PremiumTopping(premiumTopping, true);
+
             toppings.add(userTopping);
             System.out.println("Would you like to add extra meat? ");
             String extraMeat = scanner.nextLine();
@@ -160,8 +158,13 @@ public class SandwichShop {
         String cheeseTopping = scanner.nextLine();
         if (cheeseTopping.equalsIgnoreCase("Yes")) {
             System.out.println("Select a cheese of your choice: ");
+            PremiumTopping CheeseTopping = new PremiumTopping();
+            List<PremiumTopping> Cheese = CheeseTopping.getCheesePremiumTopping();
+            for (PremiumTopping x : Cheese){
+                System.out.println(x.getName());
+            }
             String cheeseChoice = scanner.nextLine();
-            Topping userCheese = new PremiumTopping(cheeseChoice);
+            Topping userCheese = new PremiumTopping(cheeseChoice, false);
             toppings.add(userCheese);
             System.out.println("Would you like extra cheese? ");
             String extraCheese = scanner.nextLine();
@@ -193,6 +196,11 @@ public class SandwichShop {
             for (Sauce x : sauces) {
                 System.out.println(x.getName());
             }*/
+            Sauce sauces = new Sauce("");
+            List<Sauce> sauce = sauces.getSauce();
+            for (Sauce x : sauce) {
+                System.out.println(x.getName());
+            }
             String sauceInput = scanner.nextLine();
             Sauce userSauce = new Sauce("");
             toppings.add(userSauce);
@@ -207,7 +215,7 @@ public class SandwichShop {
             isToastedBread = false;
         }
 
-        Sandwich sandwich = new Sandwich(breadSize, breadType, isToastedBread, userExtraCheese, userExtraMeat);
+        Sandwich sandwich = new Sandwich(size, breadType, isToastedBread, userExtraCheese, userExtraMeat);
         order.addSandwichToOrder(sandwich);
 
 
@@ -290,8 +298,3 @@ public class SandwichShop {
         }
     }
 }
-
-
-
-
-
