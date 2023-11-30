@@ -1,0 +1,6 @@
+shop name: Kennedy Fried Chicken
+shop number: 718-222-8422
+
+Sandwiches = [Sandwich size = 4, breadType = white, toppings = [ PremiumTopping Meat = 0.0, isMeat = false,  RegularToppings = ,  Sauce = ], toasted = yes, extraCheese = true, extraMeat = true]
+Drinks = []
+Chips = [].

@@ -82,11 +82,15 @@ public class Sandwich implements CostInterface {
 
     @Override
     public String toString() {
+        String toastedTemp = "yes";
+        if (toasted == false){
+            toastedTemp = "No";
+        }
         return "Sandwich " +
                 "size = " + size +
                 ", breadType = " + breadType +
                 ", toppings = " + toppings +
-                ", toasted = " + toasted +
+                ", toasted = " + toastedTemp +
                 ", extraCheese = " + extraCheese +
                 ", extraMeat = " + extraMeat;
     }
