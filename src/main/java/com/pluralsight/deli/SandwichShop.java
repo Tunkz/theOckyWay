@@ -196,11 +196,6 @@ public class SandwichShop {
         if (userSauceChoice.equalsIgnoreCase("Yes")) {
             System.out.println("Here is a list of sauces");
             //Display sauces
-            /* Sauce sauce = new Sauce(String);
-            List<Sauce> sauces = sauce.getSauce();
-            for (Sauce x : sauces) {
-                System.out.println(x.getName());
-            }*/
             Sauce sauces = new Sauce("");
             List<Sauce> sauce = sauces.getSauce();
             for (Sauce x : sauce) {
@@ -245,6 +240,8 @@ public class SandwichShop {
 
         Drink drink = new Drink(sizes, flavor);
         order.addDrinkToOrder(drink);
+
+        System.out.println("Your drink has been added to the order!\n");
     }
 
     public void addChips() {
@@ -253,6 +250,8 @@ public class SandwichShop {
         // Prompt the user to select the flavor of chips
         Chips chips = new Chips(type);
         order.addChips(chips);
+
+        System.out.println("Your chips have been added to the order!\n");
     }
 
     public void checkOut() {
