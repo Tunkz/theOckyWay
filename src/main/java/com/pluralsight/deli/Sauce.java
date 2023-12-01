@@ -16,11 +16,11 @@ public class Sauce extends Topping {
     }
 
     public List<Sauce> getSauce() {
-        Sauce.add(new Sauce("mayonnaise"));
-        Sauce.add(new Sauce("ketchup"));
-        Sauce.add(new Sauce("ranch"));
+        Sauce.add(new Sauce("Mayonnaise"));
+        Sauce.add(new Sauce("Ketchup"));
+        Sauce.add(new Sauce("Ranch"));
         Sauce.add(new Sauce("BBQ"));
-        Sauce.add(new Sauce("mustard"));
+        Sauce.add(new Sauce("Mustard"));
         Sauce.add(new Sauce("Thousand islands"));
         Sauce.add(new Sauce("Vinaigrette"));
         return Sauce;

@@ -44,8 +44,6 @@ public class Order implements CostInterface {
 
     // Getter and setter methods for chips
     public List<Chips> getChips() {
-
-
         return this.chips;
     }
 
