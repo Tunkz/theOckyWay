@@ -1,0 +1,13 @@
+Shop Name: The Ocky Way
+Shop Number: 718-222-8422
+Sandwiches =
+Sandwich 
+size = 4, 
+breadType = rye, 
+toppings = [], 
+toasted = Yes, 
+extraCheese = Yes,
+extraMeat = Yes
+Drinks =
+Chips =
+Total Price: 6.3

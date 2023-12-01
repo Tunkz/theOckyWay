@@ -255,9 +255,10 @@ public class SandwichShop {
         // Prompt the user to select the flavor of chips
         List<Chips> Chip = chips.getChips();
         for (Chips x : Chip){
-            System.out.println(x);
+            System.out.println(x.getChipType());
         }
         String type = scanner.nextLine();
+        chips.setChipType(type);
         order.addChips(chips);
 
         System.out.println("Your chips have been added to the order!\n");

@@ -1,0 +1,6 @@
+Shop Name: The Ocky Way
+Shop Number: 718-222-8422
+Sandwiches =
+Drinks = 
+Chips = 
+Total Price: 1.5
