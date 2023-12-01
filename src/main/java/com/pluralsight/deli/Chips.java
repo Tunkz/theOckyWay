@@ -1,9 +1,12 @@
 package com.pluralsight.deli;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class Chips implements CostInterface {
 
-    // Type of chips
-   private String chipType;
+    private List<Chips> chips = new ArrayList<>();
+    private String chipType;
 
     // Constructor to initialize the chips with a specific chip type
     public Chips(String chipType) {
@@ -30,5 +33,13 @@ public class Chips implements CostInterface {
     @Override
     public String toString() {
         return String.format("\nChipType = " + chipType);
+    }
+
+    public List<Chips> getChips() {
+        List<Chips> chips = new ArrayList<>();
+        chips.add(new Chips("lays"));
+        chips.add(new Chips("cheetos"));
+        chips.add(new Chips("doritos"));
+        return chips;
     }
 }

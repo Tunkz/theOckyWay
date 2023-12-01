@@ -234,8 +234,12 @@ public class SandwichShop {
                 System.out.println("Please select the right character!");
             }
         }
-        System.out.println("Please select a drink of your choice: ");
-        //Prompts user to choose preferred flavor of drink
+        System.out.println("Please select a drink of your choice: \ncoke\nfanta\nsprite");
+//        Drink drinkable = new Drink("");
+//        List<Drink> drinks = drinkable.getDrinks();
+//        for (Drink x : drinks){
+//            System.out.println(x);
+//        }
         String flavor = scanner.nextLine();
 
         Drink drink = new Drink(sizes, flavor);
@@ -246,9 +250,14 @@ public class SandwichShop {
 
     public void addChips() {
         System.out.println("What flavor of chips would you like?");
-        String type = scanner.nextLine();
+        Chips chips = new Chips("");
+
         // Prompt the user to select the flavor of chips
-        Chips chips = new Chips(type);
+        List<Chips> Chip = chips.getChips();
+        for (Chips x : Chip){
+            System.out.println(x);
+        }
+        String type = scanner.nextLine();
         order.addChips(chips);
 
         System.out.println("Your chips have been added to the order!\n");
