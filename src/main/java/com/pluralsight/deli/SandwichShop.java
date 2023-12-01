@@ -218,7 +218,7 @@ public class SandwichShop {
         Sandwich sandwich = new Sandwich(size, breadType, isToastedBread, userExtraCheese, userExtraMeat);
         order.addSandwichToOrder(sandwich);
 
-
+        System.out.println("Your sandwich has been added to the order!\n");
     }
 
     public void addDrink() {
@@ -257,7 +257,7 @@ public class SandwichShop {
 
         SandwichFileManager sandwichFileManager = new SandwichFileManager();
         sandwichFileManager.saveSandwichShop(order);
-        System.out.println("Order has been checked out!");
+        System.out.println("Order has been checked out!\n");
 
     }
 
