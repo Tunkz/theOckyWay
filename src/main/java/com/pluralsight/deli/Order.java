@@ -17,7 +17,7 @@ public class Order implements CostInterface {
         this.chips = new ArrayList<>();
     }
 
-    public void addSandwich(Sandwich sandwich){
+    public void addSandwich(Sandwich sandwich) {
         sandwiches.add(sandwich);
     }
 
@@ -65,28 +65,28 @@ public class Order implements CostInterface {
 //                "Sandwiches = " + sandwiches + "\n" +
 //                "Drinks = " + drinks + "\n" +
 //                "Chips = " + chips;
-    StringBuilder stringBuilder = new StringBuilder();
-    stringBuilder.append("Sandwiches =");
-        for (Sandwich x: sandwiches) {
+        StringBuilder stringBuilder = new StringBuilder();
+        stringBuilder.append("Sandwiches =");
+        for (Sandwich x : sandwiches) {
             stringBuilder.append(x.toString());
         }
 
-    stringBuilder.append("\nDrinks = ");
-        for(Drink x:drinks){
+        stringBuilder.append("\nDrinks =");
+        for (Drink x : drinks) {
             stringBuilder.append(x.toString());
         }
-    stringBuilder.append("\nChips = ");
-        for (Chips x:chips){
+        stringBuilder.append("\nChips =");
+        for (Chips x : chips) {
             stringBuilder.append(x.toString());
         }
 
-        stringBuilder.append("\nTotal Price: "+this.getPrice());
+        stringBuilder.append("\nTotal Price: $" + this.getPrice());
 
-  //  stringBuilder.toString();
-       // System.out.println(stringBuilder.toString());
+        //  stringBuilder.toString();
+        // System.out.println(stringBuilder.toString());
 
         return stringBuilder.toString();
-      
+
     }
 
     // Method to add a drink to the order

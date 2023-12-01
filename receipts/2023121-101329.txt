@@ -1,0 +1,14 @@
+Shop Name: The Ocky Way
+Shop Number: 718-222-8422
+Sandwiches =
+Sandwich 
+size = 6, 
+breadType = white, 
+toppings = no topping, 
+toasted = Yes, 
+extraCheese = Yes,
+extraMeat = Yes
+Drinks =
+Size m, Flavor fanta
+Chips =
+Total Price: 14.9

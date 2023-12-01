@@ -51,7 +51,7 @@ public class Drink implements CostInterface {
 
     @Override
     public String toString() {
-        return String.format("\nSize " + this.size + ", Flavor " + this.flavor);
+        return String.format("\nSize: " + this.size + ", Flavor: " + this.flavor);
     }
 
     public List<Drink> getDrinks() {

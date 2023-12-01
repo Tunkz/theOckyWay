@@ -111,7 +111,7 @@ public class Sandwich implements CostInterface {
 //        }
         String AllToppings = "";
         for (Topping x:toppings){
-            AllToppings+= x.getName()+" ";
+            AllToppings+= x.getName();
         }
         if(toppings.isEmpty())AllToppings += "no topping";
         return "\nSandwich " +
