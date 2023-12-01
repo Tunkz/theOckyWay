@@ -291,7 +291,6 @@ public class SandwichShop {
             System.out.println("Order canceled successfully!");
 
             boolean returnToMainMenu = true;
-
             while (returnToMainMenu) {
                 System.out.println("Return to Main Menu? ( Y | N ): ");
                 String input = scanner.nextLine().trim();
