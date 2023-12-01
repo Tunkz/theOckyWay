@@ -47,7 +47,7 @@ These stories are a fundamental component of Agile development methodologies, su
 
 ## Demo 📽
 
-![ApplicationDemo.gif](imgs%2FApplicationDemo.gif)
+![GIFDemo.gif](imgs%2FGIFDemo.gif)
 
 ## Future Work ➡⏲💻🖥
 
