@@ -160,7 +160,7 @@ public class SandwichShop {
             System.out.println("Select a cheese of your choice: ");
             PremiumTopping CheeseTopping = new PremiumTopping();
             List<PremiumTopping> Cheese = CheeseTopping.getCheesePremiumTopping();
-            for (PremiumTopping x : Cheese){
+            for (PremiumTopping x : Cheese) {
                 System.out.println(x.getName());
             }
             String cheeseChoice = scanner.nextLine();
@@ -181,6 +181,11 @@ public class SandwichShop {
         if (regularToppingChoice.equalsIgnoreCase("Yes")) {
             System.out.println("Please, select the regular topping of your choice: ");
             // Display premium toppings
+            RegularToppings RegularToppings = new RegularToppings("");
+            List<RegularToppings> freeToppings = RegularToppings.getRegularToppings();
+            for (RegularToppings x : freeToppings){
+                System.out.println(x.getName());
+            }
 
             String regularTopping = scanner.nextLine();
             Topping userRegTopping = new RegularToppings(regularTopping);
